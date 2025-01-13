@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<style>
+	body {
+		background-color: beige;
+		margin-left: 200px;
+	}
+button{
+	margin-left: 500px;
+	padding: 9px;
+	background-color: black;
+	color: aliceblue;
+	border: 2px solid white;
+}
+</style>
+<body>
+	<form action="" name="form1">
+		<div id="que">
+			<h3>What does HTML stand for?</h3>
+			<div id="ans">
+				<input type="radio" name="que1" value="A"> HyperText Markup Language <br>
+				<input type="radio" name="que1" value="B"> HyperText Makeup Language <br>
+				<input type="radio" name="que1" value="C"> Home Tool Markup Language <br>
+				<input type="radio" name="que1" value="D"> Hyperlinks Text Markup Language
+			</div>
+		</div>
+		<div id="que">
+			<h3>Which tag is used to create a hyperlink in HTML?</h3>
+			<div id="ans">
+				<input type="radio" name="que2" value="A"> &lt;a&gt; <br>
+				<input type="radio" name="que2" value="B"> &lt;link&gt; <br>
+				<input type="radio" name="que2" value="C"> &lt;url&gt; <br>
+				<input type="radio" name="que2" value="D"> &lt;href&gt;
+			</div>
+		</div>
+		<div id="que">
+			<h3>Which attribute is used to define the style of a button in HTML?</h3>
+			<div id="ans">
+				<input type="radio" name="que3" value="A"> type <br>
+				<input type="radio" name="que3" value="B"> onclick <br>
+				<input type="radio" name="que3" value="C"> style <br>
+				<input type="radio" name="que3" value="D"> color <br>
+			</div>
+		</div>
+		<div id="que">
+			<h3>What is the default value of the type attribute of an HTML button?</h3>
+			<div id="ans">
+				<input type="radio" name="que4" value="A"> input <br>
+				<input type="radio" name="que4" value="B"> button <br>
+				<input type="radio" name="que4" value="C"> reset <br>
+				<input type="radio" name="que4" value="D"> submit <br>
+			</div>
+		</div>
+		<div id="que">
+			<h3>What does CSS stand for?</h3>
+			<div id="ans">
+				<input type="radio" name="que5" value="A"> Creative Style Sheets <br>
+				<input type="radio" name="que5" value="B"> Cascading Style Sheets <br>
+				<input type="radio" name="que5" value="C"> Colorful Style Sheets <br>
+				<input type="radio" name="que5" value="D"> Computer Style Sheets
+			</div>
+		</div>
+		<button type="button" onclick="submitExam()">Submit Answers</button>
+	</form>
+	<script>
+		const ans = { que1: 'A', que2: 'A', que3: 'C', que4: 'D', que5: 'B' };
+		function submitExam() {
+			let score = 0;
+			let totalQuestions = Object.keys(ans).length;
+			for (let key in ans) {
+				let selected = document.querySelector('input[name="' + key + '"]:checked');
+				if (selected && selected.value === ans[key]) {
+					score++;}}
+			alert("Your Score: " + score + "/" + totalQuestions);}
+	</script>
+</body>
+</html>

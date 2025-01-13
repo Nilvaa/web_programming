@@ -1,0 +1,131 @@
+<html>
+
+<head>
+	<title>Form</title>
+	<style>
+		
+
+		div {
+			margin-left: 250px;
+			margin-top: 50px;
+			width: 50%;
+			padding: 20px;
+		}
+
+		
+		table {
+			width: 100%;
+		}
+
+		td {
+			padding: 10px;
+		
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		input[type="date"],
+		input[type="password"],
+		textarea {
+			width: 100%;
+			
+			padding: 9px;
+		}
+
+		textarea {
+			height: 100px;
+
+		}
+
+		input[type="submit"] {
+			width: 50%;
+			padding: 8px;
+			background-color: crimson;
+			color: white;
+			border: 2px solid white;
+			display: block;
+			
+			margin: 20px auto;
+			
+		}
+
+		input[type="submit"]:hover {
+			background-color: white;
+			color: crimson;
+			border: 2px solid crimson;
+		}
+	</style>
+	
+</head>
+<script>
+	function validate() {
+		let fn=document.form1.name.value;
+		let ln=document.form1.lna.value;
+		let em=document.form1.email.value;
+		let pa=document.form1.pass.value;
+		let ph=document.form1.ph.value;
+		if (fn===""){
+			alert("First name can't be empty! please fill");
+			return false;
+		}else if(fn.length<=2){
+			alert("Name should more than 2 letters")
+		}else if(ln===""){
+			alert("Last name can't be empty! please fill");
+			return false;
+		}else if(em===""){
+			alert("email name can't be empty! please fill");
+			return false;
+		}else if (em.indexOf("@") === -1 || em.indexOf(".") === -1 || em.indexOf("@") > em.lastIndexOf(".")) {
+			alert("Please enter a valid email address.");
+	}else if(pa===""){
+		alert("password name can't be empty! please fill");
+	}else if(pa.length<4){
+		alert("password should contain more than 4 characters");
+	}else if(ph===""){
+		alert("phone number can't be empty! please fill");
+	}else if(ph.length!=10){
+		alert("phone number should be 10 digits");
+	}
+}
+</script>
+<body>
+	<div>
+		<form name="form1" onsubmit="return validate()">
+			<fieldset>
+				<legend>Personal details</legend>
+				<table>
+					<tr>
+						<td><label>First Name</label></td>
+						<td> <input type="text" name="name" placeholder="Enter your name"></td>
+					</tr>
+					<tr>
+						<td><label>Last Name</label></td>
+						<td><input type="text" name="lna"  placeholder="Enter your username"></td>
+					</tr>
+					<tr>
+						<td><label>Email</label></td>
+						<td><input type="email" name="email" placeholder="Enter your Email"></td>
+					</tr>
+					<tr>
+						<td><label>Password</label></td>
+						<td><input type="password" name="pass" placeholder="Enter your password"></td>
+					</tr>
+					<tr>
+						<td><label>Phone Number</label></td>
+						<td><input type="tel" name="ph" placeholder="Enter your phone number"></td>
+					</tr>
+	
+					<tr>
+						<td colspan="2">
+							<input type="submit" value="SIGN IN">
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+	
+</body>
+
+</html>

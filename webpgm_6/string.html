@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+	<h1>JavaScript String Methods</h1>
+	<h4>Original Text: hello good morning</h4>
+	<h4 id="p1"></h4>
+	<h4 id="p2"></h4>
+	<h4 id="p3"></h4>
+	<h4 id="p4"></h4>
+	<h4 id="p5"></h4>
+	<h4 id="p6"></h4>
+	<h4 id="p7"></h4>
+	<h4 id="p8"></h4>
+	<script>
+		let a = "hello good morning"; 
+		document.getElementById("p1").innerHTML = "Using length: " + a.length;
+		document.getElementById("p2").innerHTML = "Using slice(6,10): " + a.slice(6,10);
+		document.getElementById("p3").innerHTML = "Using slice(-8): " + a.slice(-8);
+		document.getElementById("p4").innerHTML = "Using substr(6,10): " + a.substr(6,10);
+		document.getElementById("p5").innerHTML = "Using substring(6,10): " + a.substring(6,10);
+		document.getElementById("p6").innerHTML = "Using replace(): " + a.replace("morning", "night"); 
+		document.getElementById("p7").innerHTML = "Using concat(): " + a.concat(" how are you?"); 
+		document.getElementById("p8").innerHTML = "Using toUpperCase(): " + a.toUpperCase(); 
+	</script>
+</body>
+</html>

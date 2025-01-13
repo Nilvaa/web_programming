@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	#div1{
+		width: 50%;
+		margin-left: 300px;
+		margin-top: 100px;
+		height: 200px;
+		border: 2px solid black;
+	}
+</style>
+<body id="bo">
+	<div id="div1">
+		<h3 id="msg"><center>Initial state</center></h3>
+	</div>
+	<script>
+		let di=document.getElementById("div1");
+		di.addEventListener('click',fun);
+		function fun(){
+			di.style.backgroundColor="lightgreen"
+			document.getElementById("msg").innerHTML="color changed";
+		}
+		let b=document.getElementById("bo");
+		b.addEventListener('click',fun2);
+		function fun2(){
+			b.style.backgroundColor="pink";
+		}
+	</script>
+</body>
+</html>
